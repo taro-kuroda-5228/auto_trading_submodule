@@ -76,4 +76,4 @@ class ModelSelection:
                 f"""best_model: {self.model_str[self.idx_max_model]}\nbest_split: {self.idx_max_split}"""
             )
 
-        return self.l_l_clf[self.idx_max_model][self.idx_max_split]
+        return self.l_l_clf[self.idx_max_model][self.idx_max_split], self.idx_max_split
