@@ -1,4 +1,5 @@
 from model_selection import ModelSelection
+from sklearn.metrics import accuracy_score
 
 
 class Prediction:
@@ -30,3 +31,8 @@ class Prediction:
         )
         self.pred = self.best_model.predict(self.l_X_test[self.idx_max_split])
         return self.pred
+    
+    def accuracy_score(self):
+        self.pred()        
+        self.accuracy_score = accuracy_score(y_true=self.l_y_test[self.idx_max_split], y_pred=self.pred)
+        return self.accuracy_score
